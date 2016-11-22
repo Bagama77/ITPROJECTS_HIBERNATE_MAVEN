@@ -4,11 +4,14 @@ import dao.HibernateProjectDAO;
 import dao.HibernateSessionfactory;
 import dao.HibernateTeamDAO;
 import model.Developer;
+import model.Project;
 import model.Team;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class DeveloperRunner {
@@ -23,8 +26,13 @@ public class DeveloperRunner {
         hibernateTeamDAO = new HibernateTeamDAO();
         hibernateProjectDAO = new HibernateProjectDAO();
 
-        System.out.println("main: Adding new project");
-        hibernateProjectDAO.addProject("New Hib Project", "team of new Hib project", 3);
+//        System.out.println("main: Adding new project");
+//        hibernateProjectDAO.addProject("New Hib Project2", "team of new Hib project2", 5);
+        System.out.println("Deleting project:" + hibernateProjectDAO.removeProject(1));
+        ArrayList<Project> projectArrayList = (ArrayList<Project>)hibernateProjectDAO.projectList();
+        for(Project p: projectArrayList){
+            System.out.println(p);
+        }
 
 //        System.out.println("main: Adding new team..");
 //        hibernateTeamDAO.addTeam("New hibernate team", 2);

@@ -47,4 +47,13 @@ public class HibernateProjectDAO {
         else
             return null;
     }
+
+    public List<Project> projectList(){
+        System.out.println("Inside projectList method..");
+        Session session = HibernateSessionfactory.getSessionFactory().openSession();
+        Query query = session.createQuery("FROM Project");
+        List<Project> projectList = query.list();
+        session.close();
+        return projectList;
+    }
 }
