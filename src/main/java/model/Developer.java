@@ -84,9 +84,8 @@ public class Developer {
 
     @Override
     public String toString() {
-        System.out.printf("\t\t\tid=%d , nameDeveloper=%-20s , \tspeciality=%-10s , \tsalary=%d, \tid_Team=%d \r\n, ",
-                id, name, speciality, salary, team.getId());
-        return "";
+        return "\tid=" + id + "\tnameDeveloper=" + name + "\t\tspeciality=" + speciality
+                + "\t\tsalary=" + salary + "\tid_Team=" + team.getId() + "\r\n";
     }
 
 

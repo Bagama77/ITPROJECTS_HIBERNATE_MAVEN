@@ -12,7 +12,6 @@ import java.util.List;
 public class HibernateProjectDAO {
 
     public Project addProject(String nameProject, String nameTeam, int teamSize){
-        System.out.println("Inside addProject method..");
         HibernateTeamDAO hibernateTeamDAO = new HibernateTeamDAO();
         Team team = hibernateTeamDAO.addTeam(nameTeam, teamSize);
 
@@ -28,13 +27,11 @@ public class HibernateProjectDAO {
     }
 
     public Project removeProject(int idProject2){
-        System.out.println("Inside removeProject method..");
         Session session = HibernateSessionfactory.getSessionFactory().openSession();
         Query query = session.createQuery("FROM Project as P WHERE P.id = ?");
         query.setParameter(0, idProject2);
         List<Team> projectListForDeleting = query.list();
 
-        System.out.println("Project for deleting:" + projectListForDeleting);
         Project project = (Project) session.get(Project.class, idProject2);
         Transaction transaction = session.beginTransaction();
         session.delete(project);
@@ -49,7 +46,6 @@ public class HibernateProjectDAO {
     }
 
     public List<Project> projectList(){
-        System.out.println("Inside projectList method..");
         Session session = HibernateSessionfactory.getSessionFactory().openSession();
         Query query = session.createQuery("FROM Project");
         List<Project> projectList = query.list();

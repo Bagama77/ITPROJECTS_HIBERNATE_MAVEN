@@ -24,14 +24,12 @@ public class HibernateDeveloperDAO {
     }
 
     public List<Developer> addDevelopers(Team team, int size){
-        System.out.println("inside addDevelopers method..");
         Developer developer;
         List<Developer> developerList = new ArrayList<Developer>(size);
         for(int i = 0; i < size; i++){
             developer = addDeveloper(team);
             developerList.add(developer);
         }
-        System.out.println("inside addDevelopers.. developers list:" + developerList);
         return developerList;
     }
 

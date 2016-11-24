@@ -22,9 +22,9 @@
         010177
     </property>
     <property name="javax.persistence.validation.mode">none</property>
+    <property name="show_sql">true</property>
 
-    <!-- List of XML mapping files -->
-    <!--mapping resource="resources/Developer.hbm.xml"/-->
+    <!--List of mapping classes-->
     <mapping class="model.Project"/>
     <mapping class="model.Team"/>
     <mapping class="model.Developer"/>

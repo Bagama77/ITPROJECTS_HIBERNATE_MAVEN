@@ -19,7 +19,7 @@ public class Team {
     private String name;
 
     @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER, mappedBy = "team")
-    private List<Developer> developers;
+    private List<Developer> developers = new ArrayList<Developer>();
 
     @Column(name = "size")
     private int size;
@@ -67,6 +67,7 @@ public class Team {
 
     public void setDevelopers(List<Developer> developers) {
         for(Developer dev: developers){
+//            developers.add(dev);//???
             addDeveloper(dev);
         }
     }
@@ -80,11 +81,12 @@ public class Team {
 
     @Override
     public String toString() {
-        return "Team: " +
-                "idTeam=" + id +
+        String s = "";
+        for(Developer d: developers){
+            s += "" + d;
+        }
+        return "idTeam=" + id +
                 ", nameTeam='" + name + '\'' +
-                ", size=" + size + "\r\n" + "\t\tDevelopers:\r\n" + developers;
+                ", size=" + size + "\r\n" + "Developers:\r\n" + s;
     }
-
-
 }

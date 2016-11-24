@@ -3,6 +3,7 @@ package controler;
 import dao.HibernateProjectDAO;
 import dao.HibernateSessionfactory;
 import model.Project;
+import org.hibernate.SessionFactory;
 import view.MainMenu;
 import view.MenuAddProject;
 import view.MenuDeleteProject;
@@ -12,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MainController {
-    HibernateSessionfactory hibernateSessionfactory = new HibernateSessionfactory();
+    SessionFactory sessionFactory = HibernateSessionfactory.getSessionFactory();
     MainMenu mainMenu = new MainMenu();
     MenuAddProject menuAddProject = new MenuAddProject();
     MenuDeleteProject menuDeleteProject = new MenuDeleteProject();
@@ -40,7 +41,6 @@ public class MainController {
                     break;
                 case 4:
                     System.out.println("Exit..");
-//                    hibernateProjectDAO.closeConnection();
                     System.exit(0);
                     break;
                 default:

@@ -59,8 +59,8 @@ public class Project {
 
     @Override
     public String toString() {
-        return "Project: " +
+        return "\r\nProject: " +
                 "id=" + id +
-                ", name='" + name + "team: " + team;
+                ", name='" + name + "\r\nteam: " + team;
     }
 }

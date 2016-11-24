@@ -10,25 +10,20 @@ import java.util.List;
 public class HibernateTeamDAO {
 
     public Team addTeam(String nameTeam, int size){
-        System.out.println("Inside addTeam method..");
         Session session = HibernateSessionfactory.getSessionFactory().openSession();
         Transaction transaction = null;
         Integer teamId = null;
         transaction = session.beginTransaction();
         Team team = new Team(nameTeam, size);
-        System.out.println("New team created.. " + team);
-
-
+        //New team created.. " + team
 
         teamId= (Integer) session.save(team);
         transaction.commit();
         team.setId(teamId);
         System.out.println("Team is saved in DB.. " + team + "\r\ntransaction was commited:" + transaction.wasCommitted());
 
-
         team = fetchTeamToDevelopers(team, size);
         session.close();
-
         return team;
     }
 
@@ -54,12 +49,10 @@ public class HibernateTeamDAO {
     }
 
     public Team fetchTeamToDevelopers(Team team, int sizeOfTeam){
-        System.out.println("inside fetchTeamToDevelopers method..");
-
-        System.out.println("First we should create developers list..");
+        //First we should create developers list..
         HibernateDeveloperDAO hibernateDeveloperDAO = new HibernateDeveloperDAO();
         List<Developer> developerList = hibernateDeveloperDAO.addDevelopers(team, sizeOfTeam);
-        System.out.println("List created:" + developerList.get(0));
+        //List created:" + developerList.get(0));
 
         //secondly we should map list of developers to team
         Session session = HibernateSessionfactory.getSessionFactory().openSession();
@@ -67,18 +60,14 @@ public class HibernateTeamDAO {
         Integer teamId = null;
         transaction = session.beginTransaction();
 
-        System.out.println("get our saved Team from DB..");
+        //get our saved Team from DB.."
         Team tempTeam = (Team) session.load(Team.class, team.getId());
-        System.out.println("got team from DB:" + team);
 
-
-        System.out.println("set Developers list to this team..");
+        //set Developers list to this team..
         tempTeam.setDevelopers(developerList);
         //resave Team with developers list..
         session.saveOrUpdate(tempTeam);
-        System.out.println("Saved in DB tempTeam: " + tempTeam);
-        transaction.commit();
-//        session.close();
+         transaction.commit();
 
         if(transaction.wasCommitted()) {
             session.close();
