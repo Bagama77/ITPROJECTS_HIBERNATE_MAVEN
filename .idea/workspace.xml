@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec4b1266-3efb-449f-8fa3-82a19a618673" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Bagama\IdeaProjects\ITProjects_Hibernate_Maven\src\main\java\controler\DeveloperRunner.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bagama\IdeaProjects\ITProjects_Hibernate_Maven\target\classes\controler\DeveloperRunner.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/Developer.class" afterPath="$PROJECT_DIR$/target/classes/model/Developer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/HibernateProjectDAO.class" afterPath="$PROJECT_DIR$/target/classes/dao/HibernateProjectDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/HibernateSessionfactory.class" afterPath="$PROJECT_DIR$/target/classes/dao/HibernateSessionfactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controler/MainController.class" afterPath="$PROJECT_DIR$/target/classes/controler/MainController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/Project.class" afterPath="$PROJECT_DIR$/target/classes/model/Project.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/Team.class" afterPath="$PROJECT_DIR$/target/classes/model/Team.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/Developer.java" afterPath="$PROJECT_DIR$/src/main/java/model/Developer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/HibernateDeveloperDAO.java" afterPath="$PROJECT_DIR$/src/main/java/dao/HibernateDeveloperDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/HibernateProjectDAO.java" afterPath="$PROJECT_DIR$/src/main/java/dao/HibernateProjectDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/HibernateSessionfactory.java" afterPath="$PROJECT_DIR$/src/main/java/dao/HibernateSessionfactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/HibernateTeamDAO.java" afterPath="$PROJECT_DIR$/src/main/java/dao/HibernateTeamDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controler/MainController.java" afterPath="$PROJECT_DIR$/src/main/java/controler/MainController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/Project.java" afterPath="$PROJECT_DIR$/src/main/java/model/Project.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/Team.java" afterPath="$PROJECT_DIR$/src/main/java/model/Team.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="ec4b1266-3efb-449f-8fa3-82a19a618673" name="Default" comment="" />
     <ignored path="ITProjects_Hibernate_Maven.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -750,16 +730,16 @@
       <workItem from="1479313666019" duration="888000" />
       <workItem from="1479335037662" duration="4074000" />
       <workItem from="1479379864229" duration="12666000" />
-      <workItem from="1479681020411" duration="12162000" />
+      <workItem from="1479681020411" duration="12532000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29790000" />
+    <option name="totallyTimeSpent" value="30160000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
